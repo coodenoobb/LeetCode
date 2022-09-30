@@ -16,7 +16,7 @@ public:
             }
             mid = l+((h-l)/2);
         }
-        return l;
+        return mid;
         
     }
 };
