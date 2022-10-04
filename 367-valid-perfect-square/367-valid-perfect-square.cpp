@@ -18,6 +18,7 @@ public:
                 return val;
             }
             else if (sqr<n){
+                ans = mid;
                 l = mid+1;
             }
             else{
