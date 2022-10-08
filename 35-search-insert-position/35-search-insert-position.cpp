@@ -1,27 +1,29 @@
 class Solution {
 public:
-    int searchInsert(vector<int>& arr, int key) {
+    int searchInsert(vector<int>& nums, int target) {
         
         int l = 0;
-        int h = arr.size()-1;
-        
+        int h = nums.size()-1;
         int mid = l+(h-l)/2;
         
-        while(l<=h){
-            if(arr[mid]==key){
+            
+        while(l<=h){            
+            
+            if(nums[mid]==target){                
                 return mid;
             }
             
-            else if(arr[mid]<key){
-                
-                l = mid + 1;
-            }
-            else{
+            else if(nums[mid]>target){
                 h = mid - 1;
             }
+            
+            else {               
+                l = mid + 1;
+            }
+            
             mid = l+(h-l)/2;
         }
-        return mid;
         
+        return mid;
     }
 };
