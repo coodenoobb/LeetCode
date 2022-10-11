@@ -2,24 +2,37 @@ class Solution {
 public:
     int countNegatives(vector<vector<int>>& grid) {
         
-        int count = 0;
         int row = grid.size();
+        int ans = 0;
+        
+        
         int col = grid[0].size();
         
-//         int l = 0;
-//         int h = row*col;
         
-        for(int i = 0; i<row;i++){
-            for(int j = 0;j<col;j++){
-                if(grid[i][j]<0){
-                    count++;
+        for(int i=0; i<row; i++){
+            int l = 0;
+            int h = col-1;
+            int mid = l+(h-l)/2;
+            int sum = 0;
+            
+            
+            while(l<=h){
+                
+                int val = grid[i][mid];
+                
+                if(val<0){
+                    h = mid-1;
+                    
                 }
+                else{
+                    l = mid+1;
+                }
+                mid = l+(h-l)/2;
+                sum = col-mid;
             }
+           
+            ans = ans+sum;
         }
-        return count;
-        
-        
-        
-        
+        return ans;
     }
 };
