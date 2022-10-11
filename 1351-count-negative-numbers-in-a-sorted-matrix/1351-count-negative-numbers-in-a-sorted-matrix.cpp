@@ -20,12 +20,13 @@ public:
                 
                 int val = grid[i][mid];
                 
-                if(val<0){
-                    h = mid-1;
+                if(val>=0){
+                    l = mid+1;
                     
                 }
                 else{
-                    l = mid+1;
+                    
+                    h = mid-1;
                 }
                 mid = l+(h-l)/2;
                 sum = col-mid;
