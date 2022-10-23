@@ -9,7 +9,7 @@ public:
             return 1;
         }
         
-        else if(n%2!=0){
+        else if(n%2==1){
             return 0;
         }
         return check(n/2);
