@@ -6,7 +6,7 @@ public:
         int count = 0;
         
         for(int i = n; i>=0;i--){
-            if(s[i]!=' '){
+            if((s[i]>='a' && s[i]<='z') or (s[i]>='A' && s[i]<='Z')){
                 count++;
             }
             else if(count>0){
