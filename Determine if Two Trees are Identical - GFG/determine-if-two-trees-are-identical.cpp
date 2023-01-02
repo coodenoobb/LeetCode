@@ -48,10 +48,10 @@ class Solution
         
         else if(r1!=NULL && r2==NULL)   return false;
         
-        bool value = (r1->data == r2->data);
+        
         bool left = isIdentical(r1->left,r2->left);
         bool right = isIdentical(r1->right,r2->right);
-        
+        bool value = (r1->data == r2->data);
         
         
         if(left && right && value){
