@@ -97,7 +97,9 @@ class Solution {
       
       
       if(root==NULL){
-         pair<int,int> p = make_pair(0,0);
+         pair<int,int> p;
+         p.first=0;
+         p.second=0;
         
         
         return p;
