@@ -103,11 +103,12 @@ class Solution{
         // base case
         if(node==NULL)  return 0;
         
-        int lh = height(node->left);
-        int rh = height(node->right);
+        int leftHeight = height(node->left);
+        int rightHeight = height(node->right);
         
-        int ans = max(lh,rh)+1;
-        return ans;
+        int maxHeight = max(leftHeight , rightHeight) + 1;
+        
+        return maxHeight;
     }
 };
 
