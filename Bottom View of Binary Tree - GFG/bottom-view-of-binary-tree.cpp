@@ -96,7 +96,7 @@ Node* buildTree(string str)
 class Solution {
   public:
     vector <int> bottomView(Node *root) {
-         vector<int> ans;
+          vector<int> ans;
         map<int,int> mp;
         
         queue<pair<Node*,int>>q;
@@ -109,9 +109,9 @@ class Solution {
             Node* frontNode = temp.first;
             int line = temp.second;
             
-            // finding entry with reg to line
             
-            mp[line] = frontNode->data;
+            
+                mp[line] = frontNode->data;
             
             if(frontNode->left) q.push(make_pair(frontNode->left,line-1));
             if(frontNode->right) q.push(make_pair(frontNode->right,line+1));
