@@ -10,17 +10,17 @@ using namespace std;
 class Solution{   
 public:
     int getPairsCount(int arr[], int n, int k) {
-        
-    
-    unordered_map<int, int> freq;
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        if (freq.find(k - arr[i]) != freq.end()) {
-            count += freq[k - arr[i]];
+        // code here
+        unordered_map<int,int> mp;
+        int ans = 0;
+        for(int i=0;i<n;i++){
+            int b = k-arr[i];
+            if(mp[b]){
+                ans = ans + mp[b];
+            }
+            mp[arr[i]]++;
         }
-        freq[arr[i]]++;
-    }
-    return count;
+        return ans;
     }
 };
 
